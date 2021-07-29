@@ -15,16 +15,17 @@ class ActionApi {
     static createAction(){
         const formData = {
             name: nameInput.value,
-            description: descriptionInput.value,
-            category_id: dropdown.value
+            description: descriptionInput.value, 
+            category_id: dropdown.value 
         }
 
         const configObj = {
-            method: 'POST',
-            headers: {
-                "Content-Type": "application/json",
-                Accept: "application/json"},
-                body: JSON.stringify(formData)
+            method: 'POST', 
+            headers: { 
+                "Content-Type": "application/json", 
+                Accept: "application/json"
+            },
+            body: JSON.stringify(formData) 
         }
 
         fetch(this.baseURL, configObj)
