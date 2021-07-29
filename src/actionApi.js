@@ -16,7 +16,7 @@ class ActionApi {
         const formData = {
             name: nameInput.value,
             description: descriptionInput.value, 
-            category_id: dropdown.value 
+            //category_id: dropdown.value 
         }
 
         const configObj = {
