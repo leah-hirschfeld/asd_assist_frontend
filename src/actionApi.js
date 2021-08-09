@@ -16,7 +16,7 @@ class ActionApi {
         const formData = {
             name: nameInput.value,
             description: descriptionInput.value, 
-            //category_id: dropdown.value 
+            category_id: dropdown.value 
         }
 
         const configObj = {
@@ -52,7 +52,7 @@ class ActionApi {
                 body: JSON.stringify(actionInfo)
             }
 
-        fetch(`${this.baseURL}/${item.id}`, configObj)
+        fetch(`${this.baseURL}/${action.id}`, configObj)
         .then(r = r.json())
         .then(json => {
             action.renderLI()

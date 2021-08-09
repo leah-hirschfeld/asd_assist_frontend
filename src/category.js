@@ -34,11 +34,9 @@ class Category{
     }
 
     setActiveCategory = (e) => {
-        let filteredCategory 
+        let filteredCategory
         Category.all.forEach(c => {
-    
             if(c.element === this.element && !this.active){
-                
                 c.element.classList.add('activated')
                 c.active = true
                 filteredCategory = c
@@ -46,9 +44,7 @@ class Category{
                 c.element.classList.remove('activated')
                 c.active = false
             }
-            
         }) 
-        
         Action.filterByCategory(filteredCategory)
     }
 

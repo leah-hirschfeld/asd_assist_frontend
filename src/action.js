@@ -3,10 +3,10 @@ class Action {
 
     static container = document.getElementById('action-list')
 
-    constructor({id, name, descirption, category_id}){
+    constructor({id, name, description, category_id}){
         this.id = id;
         this.name = name;
-        this.descirption = descirption;
+        this.description = description;
         this.categoryID = category_id;
 
         this.element = document.createElement('li');
@@ -66,7 +66,7 @@ deleteItem = (e) => {
 
 
 saveUpdatedItem = () => {
-    this.name = this.element.querySelector(".edit-price").value;
+    this.name = this.element.querySelector(".edit-name").value;
     this.description = this.element.querySelector(".edit-description").value;
 
     ItemApi.sendPatch(this);
@@ -83,7 +83,7 @@ static filterByCategory(filteredCategory) {
         }
     } else {
         for (const action of Action.all) {
-            item.element.style.display = "";
+            action.element.style.display = "";
         }
     }
 }

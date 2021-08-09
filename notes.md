@@ -10,3 +10,9 @@
 * Let folks add check list items
 * Add links and bank of resources
 * Remove items from checklist once checked?
+
+if(this.active === false) {
+            this.active = true
+        }else{
+            this.active = false
+        }
