@@ -9,7 +9,10 @@
    <h1> This is a tool to assist with your child's Autism Spectrum Diagnosis (ASD). </h1>
 
    <h2> Here is your checklist: </h2>
-   <ul id = "check-list"> </ul>
+   <h2>Filter by Category:</h2>
+      <div id="category-container"></div>
+
+   <ul id = "action-list"> </ul>
 
 
    <h3> Add new items to your checklist: </h3>
@@ -18,11 +21,16 @@
       <input type='text' name='name' id='action-name'> <br>
       <label for = 'action-description'> Description: </label>
       <input type='text' name='description' id='action-description'> <br>
+
+      <label for="category-dropdown">Category:</label>
+           <select name="category_id" id="category-dropdown">
+           </select><br><br>
+
       <input type = 'submit' value = 'Create'>
    </form>
 
-   <!-- <script src="src/category.js" type="text/javascript"></script>
-   <script src="src/categoryApi.js" type="text/javascript"></script> -->
+   <script src="src/category.js" type="text/javascript"></script>
+   <script src="src/categoryApi.js" type="text/javascript"></script>
    <script src="src/action.js" type="text/javascript"></script>
    <script src="src/actionApi.js" type="text/javascript"></script>
    <script src="index.js" type="text/javascript"></script>

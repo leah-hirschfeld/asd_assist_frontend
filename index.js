@@ -7,8 +7,8 @@
   const nameInput = document.getElementById('action-name')
   const descriptionInput = document.getElementById('action-description')
   
-  //const dropdown = document.getElementById('cat-dropdown')
-  //const catNameInput = document.getElementById("category-name")
+  const dropdown = document.getElementById('category-dropdown')
+  const categoryNameInput = document.getElementById("category-name")
   
   form.addEventListener('submit', handleFormSubmit)
   
@@ -22,4 +22,4 @@
   
   ActionApi.getActions()
   
-  //CategoryApi.getCategories()
+  CategoryApi.getCategories()

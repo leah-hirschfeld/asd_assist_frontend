@@ -1,7 +1,7 @@
 class Action {
     static all = []
 
-    static container = document.getElementById('check-list')
+    static container = document.getElementById('action-list')
 
     constructor({id, name, descirption, category_id}){
         this.id = id;
