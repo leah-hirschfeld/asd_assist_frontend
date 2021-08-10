@@ -48,14 +48,15 @@ class ActionApi {
             method: 'PATCH',
             headers: {
                 "Content-Type": "application/json",
-                Accept: "application/json"},
+                Accept: "application/json"
+            },
                 body: JSON.stringify(actionInfo)
             }
 
         fetch(`${this.baseURL}/${action.id}`, configObj)
-        .then(r = r.json())
+        .then(r => r.json())
         .then(json => {
-            action.renderLI()
+            action.renderLi()
         })
     }
 

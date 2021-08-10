@@ -16,3 +16,14 @@ if(this.active === false) {
         }else{
             this.active = false
         }
+
+
+        Category.all.forEach(c => {
+            if(c.element === this.element && !this.active){
+                c.element.classList.add('activated')
+                c.active = true
+                filteredCategory = c
+            } else{
+                c.element.classList.remove('activated')
+                c.active = false
+            }

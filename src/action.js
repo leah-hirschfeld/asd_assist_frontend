@@ -69,21 +69,21 @@ saveUpdatedItem = () => {
     this.name = this.element.querySelector(".edit-name").value;
     this.description = this.element.querySelector(".edit-description").value;
 
-    ItemApi.sendPatch(this);
+    ActionApi.sendPatch(this);
 }
 
 static filterByCategory(filteredCategory) {
     if (filteredCategory){
         for (const action of Action.all){
             if(action.categoryId === parseInt(filteredCategory.id)){
-                action.element.style.display = "";
+                action.element.style.display = ""
             } else {
-                action.element.style.display = "none";
+                action.element.style.display = "none"
             }
         }
     } else {
         for (const action of Action.all) {
-            action.element.style.display = "";
+            action.element.style.display = ""
         }
     }
 }
