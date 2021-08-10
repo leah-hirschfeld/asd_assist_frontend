@@ -11,6 +11,8 @@
 * Add links and bank of resources
 * Remove items from checklist once checked?
 
+- make sure can filter by category
+
 if(this.active === false) {
             this.active = true
         }else{
@@ -27,3 +29,18 @@ if(this.active === false) {
                 c.element.classList.remove('activated')
                 c.active = false
             }
+
+
+            if (filteredCategory){
+        for (const action of Action.all){
+            if(action.categoryId === parseInt(filteredCategory.id)){
+                action.element.style.display = ""
+            } else {
+                action.element.style.display = "none"
+            }
+        }
+    } else {
+        for (const action of Action.all){
+            action.element.style.display = ""
+        }
+    }

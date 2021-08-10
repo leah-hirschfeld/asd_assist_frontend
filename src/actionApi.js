@@ -21,7 +21,7 @@ class ActionApi {
 
         const configObj = {
             method: 'POST', 
-            headers: { 
+            headers: {
                 "Content-Type": "application/json", 
                 Accept: "application/json"
             },
@@ -33,7 +33,7 @@ class ActionApi {
         .then(data => {
             const action = data.data
             const i = new Action({id: action.id,...action.attributes})
-            i.attachToDom();
+            i.attachToDom()
         })
     }
 
@@ -62,10 +62,11 @@ class ActionApi {
 
     static deleteAction(id) {
         const configObj = {
-            method: 'Delete',
+            method: 'DELETE',
             headers: {
                 "Content-Type": "application/json",
-                Accept: "application/json"}
+                Accept: "application/json"
+            }
             }
         fetch(`${this.baseURL}/${id}`, configObj)
         .then(r => r.json())

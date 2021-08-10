@@ -33,7 +33,7 @@ class Action {
     renderLi(){
         this.element.innerHTML = `
         <div data-id="${this.id}">
-            Action Item: <span class="name">${this.name}</span> <br>
+            Action: <span class="name">${this.name}</span> <br>
             Description: <span class="description">${this.description}</span> <br>
         </div>
         <button class="edit" data-id="${this.id}">Edit</button>
@@ -60,8 +60,8 @@ class Action {
     }
 
 deleteItem = (e) => {
-    this.element.remove();
-    ActionApi.deleteItem(this.id);
+    this.element.remove()
+    ActionApi.deleteItem(this.id)
 }
 
 
@@ -72,7 +72,7 @@ saveUpdatedItem = () => {
     ActionApi.sendPatch(this);
 }
 
-static filterByCategory(filteredCategory) {
+static filterByCategory(filteredCategory){
     if (filteredCategory){
         for (const action of Action.all){
             if(action.categoryId === parseInt(filteredCategory.id)){
@@ -82,10 +82,9 @@ static filterByCategory(filteredCategory) {
             }
         }
     } else {
-        for (const action of Action.all) {
+        for (const action of Action.all){
             action.element.style.display = ""
         }
     }
-}
-
+    }
 }
