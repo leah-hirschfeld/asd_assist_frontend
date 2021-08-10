@@ -33,8 +33,8 @@ class Action {
     renderLi(){
         this.element.innerHTML = `
         <div data-id="${this.id}">
-            <span class="name">${this.name}</span>
-            <span class="description">${this.description}</span>
+            Action Item: <span class="name">${this.name}</span> <br>
+            Description: <span class="description">${this.description}</span> <br>
         </div>
         <button class="edit" data-id="${this.id}">Edit</button>
         <button class="delete" data-id="${this.id}">Delete</button>`
