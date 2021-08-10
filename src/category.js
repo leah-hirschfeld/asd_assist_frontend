@@ -3,7 +3,7 @@ class Category{
 
     static categoryContainer = document.getElementById('category-container')
 
-    constructor({id, name }){
+    constructor({id, name}){
         this.id = id 
         this.name = name
         this.active = false
@@ -30,23 +30,34 @@ class Category{
     }
 
     addListeners(){
-        this.element.addEventListener('click', this.setActiveCategory)
+        this.element.addEventListener('click', this.filterByDiagnosis)
     }
 
-    setActiveCategory = (e) => {
-        let filteredCategory
-        Category.all.forEach(c => {
-            if(c.element === this.element && !this.active){
-                c.element.classList.add('activated')
-                c.active = true
-                filteredCategory = c
-            } else{
-                c.element.classList.remove('activated')
-                c.active = false
+    filterByDiagnosis(){
+        Action.all.forEach(a => {
+            if (a.categoryID !== parseInt(this.id.split("-").pop())) {
+                a.element.hidden = true
             }
-        }) 
-        Action.filterByCategory(filteredCategory)
+        } )
+        // then show the action with category diagnosis 
+        // else hide the actions with other categories
+
     }
+
+    // setActiveCategory = (e) => {
+    //     let filteredCategory
+    //     Category.all.forEach(c => {
+    //         if(c.element === this.element && !this.active){
+    //             c.element.classList.add('activated')
+    //             c.active = true
+    //             filteredCategory = c
+    //         } else{
+    //             c.element.classList.remove('activated')
+    //             c.active = false
+    //         }
+    //     }) 
+    //     Action.filterByCategory(filteredCategory)
+    // }
 
 
     addToDropDown(){

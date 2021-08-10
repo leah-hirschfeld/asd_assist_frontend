@@ -11,7 +11,6 @@
 * Add links and bank of resources
 * Remove items from checklist once checked?
 
-- make sure can filter by category
 
 if(this.active === false) {
             this.active = true

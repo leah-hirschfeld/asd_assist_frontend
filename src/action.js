@@ -23,10 +23,10 @@ class Action {
         this.createEditFields(e.target)
         e.target.innerText = "Save"
     }else if(e.target.innerText === "Delete"){
-        this.deleteItem(e);
+        this.deleteItem(e)
     }else if(e.target.innerText === "Save"){
-        this.saveUpdatedItem();
-        e.target.innerText = 'Edit';
+        this.saveUpdatedItem()
+        e.target.innerText = 'Edit'
     }
 }
 
@@ -86,5 +86,6 @@ static filterByCategory(filteredCategory){
             action.element.style.display = ""
         }
     }
+    return filteredCategory
     }
 }
